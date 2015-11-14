@@ -13,9 +13,9 @@ _.try(function () {
 ### ease   _.ease(template)(list)
 定义一个模板方法，传入数组或伪数组，将他循环输出。
 template里面约定：   
-1. v - value 代表循环时当前的值
-2. k - key 代表循环时当前的索引
-3. l - list 代表传入的list
+1. v - value 代表循环时当前的值    
+2. k - key 代表循环时当前的索引   
+3. l - list 代表传入的list   
 
 ```js
 var arr1 = ['a', 'b', 'c'];
