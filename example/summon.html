@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>summon</title>
+</head>
+<body>
+<script type="text/javascript" src="../underscore-min.js"></script>
+<script type="text/javascript" src="../underscore.extend.js"></script>
+<script type="text/javascript">
+var arr = [1, -100, 0, -0];
+arr = _.summon(Math.abs)(arr);
+console.log(arr);
+
+
+var list = [0.111, 0.0001, 0.336, 0.225];
+list = _.summon(function(num){
+    return num.toFixed(2);
+})(list);
+console.log(list);
+
+
+</script>   
+</body>
+</html>

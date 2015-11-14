@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>god</title>
+</head>
+<body>
+<script type="text/javascript" src="../underscore-min.js"></script>
+<script type="text/javascript" src="../underscore.extend.js"></script>
+<script type="text/javascript">
+var arr = _.god(new Date())(['getFullYear', 'getMonth', 'getDate', 'getHours', 'getMinutes', 'getSeconds']);
+console.log(arr);
+//=> [2015, 10, 14, 10, 38, 7]
+</script>   
+</body>
+</html>

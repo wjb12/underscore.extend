@@ -16,32 +16,21 @@ _.extend(_, {
                 });
             }, '');
         }
-    }
-});
-
-_.extend(_, {
+    },
     fix2: function (str) {
-        str = String(str);
+        str = str.toString();
         if (str.length === 1) {
-            str = '0' + str;
+            str = ('0' + str).slice(-2);
         }
-        return str.slice(-str.length);
-    }
-});
-
-_.extend(_, {
-    //召唤
+        return str;
+    },
     summon: function (func) {
         return function (list) {
             return _.map(list, function (value) {
                 return func.call(this, value);
             });
         }
-    }
-});
-
-_.extend(_, {
-    //神技
+    },
     god: function (obj) {
         return function (list) {
             return _.map(list, function (value) {
