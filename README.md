@@ -168,6 +168,6 @@ var list = [{
 }];
 
 _.group(list, 'name').by('credits', 'size').val();
-_.group(list, 'name').by('credits', 'sum').by('credits', 'avg').val();
-_.group(list, 'name').by('credits', 'max').by('credits', 'min').val();
+_.group(list, 'name').by('credits', 'sum').by('quan', 'avg').val();
+_.group(list, 'name').by('credits', 'max').by('quan', 'min').val();
 ```
