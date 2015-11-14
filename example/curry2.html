@@ -8,9 +8,12 @@
 <script type="text/javascript" src="../underscore-min.js"></script>
 <script type="text/javascript" src="../underscore.extend.js"></script>
 <script type="text/javascript">
-var str = _.date('yyyy-MM-dd HH:mm:ss')(new Date());
-console.log(str);
-// => 2015-11-14 10:44:12
+function add(m, n) {
+    return m + n;
+}
+var add5 = _.curry2(add)(5);
+var a = add5(1);
+console.log(a);
 </script>   
 </body>
 </html>

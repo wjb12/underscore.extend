@@ -59,5 +59,41 @@ _.extend(_, {
                 .replace('mm', arr[4])
                 .replace('ss', arr[5]);
         }
+    },
+    curry2: function (fun) {
+        return function (arg2) {
+            return function (arg1) {
+                return fun(arg1, arg2);
+            }
+        }
+    },
+    sum: function (list) {
+        return _.reduce(list, function (memo, value, key, list) {
+            return memo + value;
+        }, 0);
+    },
+    summary: function (list, key) {
+        var obj = {};
+        _.each(list, function (v, k) {
+            if (!obj[v[key]]) {
+                obj[v[key]] = {
+                    length: 0
+                };
+            }
+            var curr = obj[v[key]];
+            curr.length++;
+            _.each(v, function (vv, kk) {
+                if (kk !== key) {
+                    if (curr[kk] === undefined) {
+                        curr[kk] = 0;
+                    }
+                    curr[kk] = curr[kk] + vv;
+                }
+            });
+        });
+        return obj;
+    },
+    avg: function (list) {
+        return _.sum(list) / list.length;
     }
 });
