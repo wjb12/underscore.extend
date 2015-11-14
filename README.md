@@ -117,8 +117,8 @@ console.log(a);
 ### _.sum(list)
 求和
 ```js
-var no = _.sum([0.1,0.2,3,4,5]);
-console.log(no);
+var sum = _.sum([0.1, 0.2, 3, 4, 5]);
+console.log(sum);
 //=> 12.3
 ```
 
