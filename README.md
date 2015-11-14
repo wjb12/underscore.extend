@@ -95,4 +95,16 @@ console.log(arr);
 ```
 
 
+### _.date(format)(time)
+传入format返回一个方法，再传入时间，返回格式化后的字符
+```js
+var str = _.date('yyyy-MM-dd HH:mm:ss')(new Date());
+console.log(str);
+// => 2015-11-14 10:44:12
+```
+
+
+
+
+
 
