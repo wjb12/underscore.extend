@@ -67,4 +67,22 @@ console.log(a1, a2, a3, a4);
 //=> 01 09 10 111
 ```
 
+### _.summon(func)(list);
+传入一个方法func, list里面的每一项值，都会执行func方法，将即结果返回为数组
+
+```js
+var arr = [1, -100, 0, -0];
+arr = _.summon(Math.abs)(arr);
+console.log(arr);
+//=> [1, 100, 0, 0]
+```
+
+```js
+var list = [0.111, 0.0001, 0.336, 0.225];
+list = _.summon(function (num) {
+    return num.toFixed(2);
+})(list);
+console.log(list);
+// => ["0.11", "0.00", "0.34", "0.23"]
+```
 
