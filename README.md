@@ -130,6 +130,62 @@ console.log(avg);
 //=> 2.5
 ```
 
+## _.summary(list, keyString)
+分类汇总
+```js
+var list = [{
+    name: '张三',
+    credits: 1,
+    quan: 2
+}, {
+    name: '张三',
+    credits: 2,
+    quan: 2
+}, {
+    name: '张三',
+    credits: 1,
+    quan: 2
+}, {
+    name: '李四',
+    credits: 6,
+    quan: 0
+}, {
+    name: '李四',
+    credits: 2,
+    quan: 2
+}, {
+    name: '王五',
+    credits: 7,
+    quan: -2
+}, {
+    name: '王五',
+    credits: 0,
+    quan: 0
+}];
+
+var out = _.summary(list, 'name');
+console.log(out);
+/* =>
+{
+    张三 : {
+        credits : 4,
+        length : 3,
+        quan : 6
+    },
+    李四 : {
+        credits : 8,
+        length : 2,
+        quan : 2
+    },
+    王五 : {
+        credits : 7,
+        length : 2,
+        quan : -2
+    }
+}
+*/
+```
+
 
 
 
