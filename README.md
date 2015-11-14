@@ -55,3 +55,16 @@ var str3 = _.ease('<div><%=k%>:<%=v.age%>+<%=l.ok%></div>')(arr3);
 console.log(str3);
 //=><div>0:12+fine</div><div>1:14+fine</div><div>2:16+fine</div>
 ```
+
+### _.fix2(Number | String)
+如果是个位数，将在前面加0, 如1变成01，应用于时间，如12:00:00;
+```js
+var a1 = _.fix2(1);
+var a2 = _.fix2('9');
+var a3 = _.fix2(10);
+var a4 = _.fix2(111);
+console.log(a1, a2, a3, a4);
+//=> 01 09 10 111
+```
+
+
