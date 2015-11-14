@@ -5,10 +5,7 @@ _.extend(_, {
         } catch (e) {
             alert(e);
         }
-    }
-});
-
-_.extend(_, {
+    },
     ease: function (template) {
         return function (list) {
             return _.reduce(list, function (memo, value, key, list) {
@@ -81,22 +78,19 @@ _.extend(_, {
     }
 });
 
-var out = _.date('yyyy-MM-dd HH:mm:ss')(new Date());
-console.log(out);
-
-var arr = [1, 2, 3, 4, 5];
-var str = _.ease('<div><%=v%></div>')(arr);
-console.log(str);
+// var out = _.date('yyyy-MM-dd HH:mm:ss')(new Date());
+// console.log(out);
 
 
-var a = {
-    0: 'aaa',
-    1: 'bbb',
-    2: 'ccc',
-    length: 3
-};
+
+// var a = {
+//     0: 'aaa',
+//     1: 'bbb',
+//     2: 'ccc',
+//     length: 3
+// };
 
 
-var aa = _.toArray(a);
+// var aa = _.toArray(a);
 
-console.log(aa);
+// console.log(aa);
