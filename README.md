@@ -130,9 +130,11 @@ console.log(avg);
 //=> 2.5
 ```
 
-## _.group(list, colname)
-    .by(colname, funName)  funName有 'size', 'avg', 'sum', 'max', 'min'
-    .val() //取值
+##  _.group(list, colname)
+    _.group(list, colname)   
+    .by(colname, funName)  funName有 'size', 'avg', 'sum', 'max', 'min'   
+    .val() //取值   
+    
 分类汇总信息
 ```js
 var list = [{
