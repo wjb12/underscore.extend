@@ -72,26 +72,31 @@ _.extend(_, {
             return memo + value;
         }, 0);
     },
-    summary: function (list, key) {
-        var obj = {};
-        _.each(list, function (v, k) {
-            if (!obj[v[key]]) {
-                obj[v[key]] = {
-                    length: 0
-                };
-            }
-            var curr = obj[v[key]];
-            curr.length++;
-            _.each(v, function (vv, kk) {
-                if (kk !== key) {
-                    if (curr[kk] === undefined) {
-                        curr[kk] = 0;
-                    }
-                    curr[kk] = curr[kk] + vv;
-                }
+    group: function (list, name) {
+        function Fun() {
+            this.list = _.groupBy(list, name);
+            this.obj = {};
+        }
+
+        Fun.prototype.by = function (col, operation) {
+            var t = this;
+            _.each(this.list, function (v, k) {
+                var arr = _.map(v, function (item, index) {
+                    return _.pick(item, col)[col];
+                });
+                // console.log(v, k);
+                // console.log(arr);
+                t.obj[k] = t.obj[k] || {};
+                t.obj[k][col] = _[operation](arr);
             });
-        });
-        return obj;
+            return t;
+        };
+
+        Fun.prototype.val = function () {
+            return this.obj;
+        }
+
+        return new Fun;
     },
     avg: function (list) {
         return _.sum(list) / list.length;
