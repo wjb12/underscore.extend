@@ -1,7 +1,7 @@
 # underscore.extend
 在underscore的基础上，加了一些自己的方法
 
-### each   _.try(func)
+### _.try(func)
 try,catch的封装，统一处理异常   
 ```js
 _.try(function () {
@@ -10,7 +10,7 @@ _.try(function () {
 ```
 
 
-### ease   _.ease(template)(list)
+### _.ease(template)(list)
 定义一个模板方法，传入数组或伪数组，将他循环输出。
 template里面约定：   
 1. v - value 代表循环时当前的值    
