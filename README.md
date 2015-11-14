@@ -130,8 +130,10 @@ console.log(avg);
 //=> 2.5
 ```
 
-## _.summary(list, keyString)
-分类汇总
+## _.group(list, colname)
+    .by(colname, funName)  funName有 'size', 'avg', 'sum', 'max', 'min'
+    .val() //取值
+分类汇总信息
 ```js
 var list = [{
     name: '张三',
@@ -163,31 +165,7 @@ var list = [{
     quan: 0
 }];
 
-var out = _.summary(list, 'name');
-console.log(out);
-/* =>
-{
-    张三 : {
-        credits : 4,
-        length : 3,
-        quan : 6
-    },
-    李四 : {
-        credits : 8,
-        length : 2,
-        quan : 2
-    },
-    王五 : {
-        credits : 7,
-        length : 2,
-        quan : -2
-    }
-}
-*/
+_.group(list, 'name').by('credits', 'size').val();
+_.group(list, 'name').by('credits', 'sum').by('credits', 'avg').val();
+_.group(list, 'name').by('credits', 'max').by('credits', 'min').val();
 ```
-
-
-
-
-
-
