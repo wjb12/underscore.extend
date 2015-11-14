@@ -103,6 +103,33 @@ console.log(str);
 // => 2015-11-14 10:44:12
 ```
 
+### _.curry2(func)
+把一个普通方法变成柯里化2。
+```js
+function add(m, n) {
+    return m + n;
+}
+var add5 = _.curry2(add)(5);
+var a = add5(1);
+console.log(a);
+//=> 6
+```
+### _.sum(list)
+求和
+```js
+var no = _.sum([0.1,0.2,3,4,5]);
+console.log(no);
+//=> 12.3
+```
+
+### _.avg(list)
+求平均值
+```js
+var avg = _.avg([1, 2, 3, 4, 5, 0]);
+console.log(avg);
+//=> 2.5
+```
+
 
 
 
