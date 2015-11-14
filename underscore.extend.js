@@ -52,14 +52,12 @@ _.extend(_, {
             //传一个方法，每个数据都执行这个方法并返回
             arr = _.summon(_.fix2)(arr);
 
-            format = format.replace('yyyy', arr[0])
+            return format.replace('yyyy', arr[0])
                 .replace('MM', arr[1])
                 .replace('dd', arr[2])
                 .replace('HH', arr[3])
                 .replace('mm', arr[4])
                 .replace('ss', arr[5]);
-
-            return format;
         }
     }
 });
