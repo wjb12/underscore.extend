@@ -37,10 +37,7 @@ _.extend(_, {
                 return obj[value]();
             });
         }
-    }
-});
-
-_.extend(_, {
+    },
     date: function (format) {
         return function (time) {
 
@@ -66,20 +63,3 @@ _.extend(_, {
         }
     }
 });
-
-// var out = _.date('yyyy-MM-dd HH:mm:ss')(new Date());
-// console.log(out);
-
-
-
-// var a = {
-//     0: 'aaa',
-//     1: 'bbb',
-//     2: 'ccc',
-//     length: 3
-// };
-
-
-// var aa = _.toArray(a);
-
-// console.log(aa);
