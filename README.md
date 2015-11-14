@@ -86,3 +86,13 @@ console.log(list);
 // => ["0.11", "0.00", "0.34", "0.23"]
 ```
 
+### _.god(object)(list)
+传入一个对象object， 后面的list为对象上的方法名， 依次执行object的各个方法
+```js
+var arr = _.god(new Date())(['getFullYear', 'getMonth', 'getDate', 'getHours', 'getMinutes', 'getSeconds']);
+console.log(arr);
+//=> [2015, 10, 14, 10, 38, 7]
+```
+
+
+
